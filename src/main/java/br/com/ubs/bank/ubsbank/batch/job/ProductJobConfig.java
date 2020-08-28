@@ -12,14 +12,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableBatchProcessing
 @RequiredArgsConstructor
-public class JobConfig {
+public class ProductJobConfig {
     @NonNull
     private JobBuilderFactory jobBuilderFactory;
 
     @Bean
-    public Job startJob(Step jsonStep){
-        return jobBuilderFactory.get("startJob")
-                .start(jsonStep).build();
+    public Job productJob(Step productStep){
+        return jobBuilderFactory.get("productJob")
+                .start(productStep).build();
     }
 
 

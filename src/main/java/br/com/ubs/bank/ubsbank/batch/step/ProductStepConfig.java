@@ -1,13 +1,12 @@
 package br.com.ubs.bank.ubsbank.batch.step;
 
 
+import br.com.ubs.bank.ubsbank.model.Product;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.data.MongoItemWriter;
-import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.json.JsonItemReader;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @RequiredArgsConstructor
-public class JsonStepConfig {
+public class ProductStepConfig {
     @NonNull
     private StepBuilderFactory stepBuilderFactory;
 
@@ -23,16 +22,14 @@ public class JsonStepConfig {
     private int chunkSize;
 
     @Bean
-    public Step jsonStep(
-            FlatFileItemReader jsonReader,
-            ItemProcessor jsonProcessor,
-            MongoItemWriter jsonWriter
+    public Step productStep(
+            JsonItemReader<Product> productItemReader,
+            MongoItemWriter productWriter
     ){
-        return stepBuilderFactory.get("jsonStep")
+        return stepBuilderFactory.get("productStep")
                 .chunk(this.chunkSize)
-                .reader(jsonReader)
-                .processor(jsonProcessor)
-                .writer(jsonWriter)
+                .reader(productItemReader)
+                .writer(productWriter)
                 .build();
     }
 }
