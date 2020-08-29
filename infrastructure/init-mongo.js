@@ -1,0 +1,1 @@
+db.getSiblingDB('ubs-bank').createUser({user:'ubs-bank', pwd:'ubs-bank', roles:[{role:'readWrite',db:'ubs-bank'}]});

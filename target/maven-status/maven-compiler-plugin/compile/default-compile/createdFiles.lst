@@ -1,0 +1,7 @@
+br/com/ubs/bank/ubsbank/dto/ProductDto.class
+br/com/ubs/bank/ubsbank/controller/ProductController.class
+br/com/ubs/bank/ubsbank/reader/FileReader.class
+br/com/ubs/bank/ubsbank/batch/step/JsonStep.class
+br/com/ubs/bank/ubsbank/dto/DataDto.class
+br/com/ubs/bank/ubsbank/batch/job/JobConfig.class
+br/com/ubs/bank/ubsbank/UbsBankApplication.class
