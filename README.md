@@ -63,11 +63,11 @@ mvn test
 ```
 
 ## Links
-Para rodar os testes, utilize o comando abaixo:
+Utilize as url`s abaixo
 ```yaml
 1 - localhost:8080/getfile 
 2 - localhost:8080/product?product=EMMS&quantity-store=20 
 ```
 1 - Url para leitura e gravação do arquivo
-2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc** e **quantity-store**
+2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc**:nome do produto  e **quantity-store**: quantidade de lojas que será distribuida o produto
 
