@@ -32,7 +32,7 @@ public class ProductController {
     }
 
     @GetMapping(value = "/product")
-    public ResponseEntity<ResponseHttp> getProduct(@RequestParam("product") String product, @RequestParam("quantity-store") int quantityStore){
+    public ResponseEntity<ResponseHttp> getProduct(@RequestParam("product-name") String product, @RequestParam("quantity-store") int quantityStore){
         if(paramsIsOk(product, quantityStore)){
             return service.getProduct(product, quantityStore);
         }

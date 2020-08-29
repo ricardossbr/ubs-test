@@ -5,16 +5,18 @@ import br.com.ubs.bank.ubsbank.model.ResponseHttp;
 import br.com.ubs.bank.ubsbank.model.Store;
 import br.com.ubs.bank.ubsbank.repository.ProductRepository;
 import org.junit.Before;
-import org.junit.jupiter.api.Assertions;
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
-import org.mockito.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 
 @RunWith(MockitoJUnitRunner.class)
