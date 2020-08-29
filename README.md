@@ -66,9 +66,9 @@ mvn test
 Utilize as url`s abaixo
 ```yaml
 1 - localhost:8080/getfile 
-2 - localhost:8080/product?product=EMMS&quantity-store=20 
+2 - localhost:8080/product?product-name=EMMS&quantity-store=20 
 ```
 1 - Url para leitura e gravação do arquivo
 
-2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc**:nome do produto  e **quantity-store**: quantidade de lojas que será distribuida o produto
+2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc-name**:nome do produto  e **quantity-store**: quantidade de lojas que será distribuida o produto
 
