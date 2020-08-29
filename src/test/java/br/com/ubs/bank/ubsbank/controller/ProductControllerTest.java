@@ -36,6 +36,12 @@ public class ProductControllerTest {
 
     @Test
     public void when_call_getfile_should_return_ok() throws IOException {
+        final ResponseEntity response = this.controller.getFile();
+        Assertions.assertEquals( 200 , response.getStatusCodeValue());
+    }
+
+    @Test
+    public void when_call_product_should_return_ok() throws IOException {
         Mockito.doReturn(this.getReponseEntity()).when(service).getProduct(Mockito.anyString(), Mockito.anyByte());
         final ResponseEntity response = this.controller.getProduct("EMSS", 1);
         Mockito.verify(this.service).getProduct(product.capture(), quantity.capture());
@@ -44,8 +50,7 @@ public class ProductControllerTest {
     }
 
     @Test
-    public void when_call_getfile_should_return_bad_request() throws IOException {
-        Mockito.doReturn(this.getReponseEntity()).when(service).getProduct(Mockito.anyString(), Mockito.anyByte());
+    public void when_call_product_should_return_bad_request() throws IOException {
         final ResponseEntity response = this.controller.getProduct("EMSS", 0);
         Assertions.assertEquals( 400, response.getStatusCodeValue());
     }

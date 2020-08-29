@@ -23,10 +23,6 @@ public class ProductController {
     @NonNull
     private final FileJsonService fileJsonService;
 
-    @GetMapping(value = "/health")
-    public ResponseEntity health(){
-        return ResponseEntity.ok(HttpStatus.OK);
-    }
 
     @GetMapping(value = "/getfile")
     public ResponseEntity getFile() throws IOException {

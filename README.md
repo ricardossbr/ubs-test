@@ -7,7 +7,7 @@ Esse é um projeto de teste, usando Java 12 para leitura, gravação e procesame
 
 ---
 
-## Getting Started
+## Começando
 
 Para executar o projeto, será necessário instalar os seguintes programas:
 ```yaml
@@ -61,3 +61,13 @@ Para rodar os testes, utilize o comando abaixo:
 ```yaml
 mvn test
 ```
+
+##Links
+Para rodar os testes, utilize o comando abaixo:
+```yaml
+1 - localhost:8080/getfile 
+2 - localhost:8080/product?product=EMMS&quantity-store=20 
+```
+1 - Url para leitura e gravação do arquivo
+2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc** e **quantity-store**
+
