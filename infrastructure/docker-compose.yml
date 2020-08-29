@@ -1,6 +1,5 @@
 version: '3.8'
 services:
-    
  mongo-server:
   image: mongo
   restart: always
@@ -13,16 +12,3 @@ services:
    - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
   ports:
    - 27017:27017
-   
- mysql-server:
-  image: mysql
-  restart: always
-  container_name: mysql-server
-  hostname: mysql-server
-  environment:
-   MYSQL_USER: ubs
-   MYSQL_PASSWORD: ubs
-   MYSQL_ROOT_PASSWORD: ubs
-   MYSQL_DATABASE: ubs
-  ports:
-   - 3306:3306
