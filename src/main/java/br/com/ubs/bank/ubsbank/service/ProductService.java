@@ -9,7 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
-import java.io.IOException;
+import org.springframework.stereotype.Service;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.ArrayList;
@@ -17,10 +18,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class ProductService {
     @Autowired
     private ProductRepository productRepository;
+
+    private double restDivision = 0;
 
     public ResponseEntity<ResponseHttp> getProduct(String product, int quantityStore){
         final List<Product> byProduct = this.productRepository.findByProduct(product);
@@ -38,9 +41,10 @@ public class ProductService {
     private List<Store> getStores(int quantityStore, List<Product> byProduct) {
         final List<Store> stores = new ArrayList<>();
         for (int i = 0; i < quantityStore; i++) {
+            final boolean lastElement = (i+1 == quantityStore);
             final Store store = new Store();
             store.setName("Loja " + (i+1));
-            store.setQuantity(this.getQuantityStore(byProduct, quantityStore));
+            store.setQuantity(this.getQuantityStore(byProduct, quantityStore, lastElement));
             store.setPrice(this.getPriceStore(byProduct));
             store.setVolume(this.getSumOfVolumeStore(store));
             store.setSumPrice(this.getSumPriceStore(store));
@@ -77,16 +81,22 @@ public class ProductService {
 
     private List<BigDecimal> getPriceStore(List<Product> products) {
         return products.stream()
-                .filter(p -> p.getProduct().equals("EMMS"))//todo retirar
                 .map(p -> new BigDecimal(p.getPrice().replace("$", "")))
                 .collect(Collectors.toList());
 
     }
 
-    private List<Integer> getQuantityStore(List<Product> products, int quantityStore) {
+    private List<Integer> getQuantityStore(List<Product> products, int quantityStore, boolean lastElement) {
         return products.stream()
-                .filter(p -> p.getProduct().equals("EMMS"))//todo retirar
-                .map(p -> Math.round(p.getQuantity() / quantityStore))
+                .map(p -> {
+                    if(lastElement){
+                        restDivision = (p.getQuantity() % quantityStore);
+                        int result = Math.round(p.getQuantity() / quantityStore);
+                        if(restDivision > 0) result +=Math.rint(restDivision);
+                        return result;
+                    }
+                    return Math.round(p.getQuantity() / quantityStore);
+                })
                 .collect(Collectors.toList());
     }
 

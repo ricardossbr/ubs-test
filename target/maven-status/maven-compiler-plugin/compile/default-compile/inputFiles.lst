@@ -1,7 +1,9 @@
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/dto/DataDto.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/batch/step/JsonStep.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/batch/job/JobConfig.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/UbsBankApplication.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/reader/FileReader.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/dto/ProductDto.java
-/Users/ricardossbr/dev/ubs-bank-test/src/main/java/br/com/ubs/bank/ubsbank/controller/ProductController.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/model/Store.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/UbsBankApplication.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/model/FileJson.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/service/ProductService.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/model/ResponseHttp.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/repository/ProductRepository.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/controller/ProductController.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/model/Product.java
+/Users/ricardossbr/dev/ubs-test/src/main/java/br/com/ubs/bank/ubsbank/service/FileJsonService.java
