@@ -1,9 +1,0 @@
-br/com/ubs/bank/ubsbank/controller/ProductController.class
-br/com/ubs/bank/ubsbank/model/Product.class
-br/com/ubs/bank/ubsbank/service/ProductService.class
-br/com/ubs/bank/ubsbank/model/ResponseHttp.class
-br/com/ubs/bank/ubsbank/repository/ProductRepository.class
-br/com/ubs/bank/ubsbank/model/FileJson.class
-br/com/ubs/bank/ubsbank/model/Store.class
-br/com/ubs/bank/ubsbank/service/FileJsonService.class
-br/com/ubs/bank/ubsbank/UbsBankApplication.class
