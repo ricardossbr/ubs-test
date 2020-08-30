@@ -50,7 +50,7 @@ Lembrando que:
     mac/linux = /Users/ricardossbr/dev/ubs-bank-test/files/  
     windows = C:\\exemple\\projeto\\files
 
-Para ultilização do Docker, acessar a pasta `infrastructure` dentro do projeto, e executar o seguinte comando, via termina:
+Para ultilização do Docker, acessar a pasta `infrastructure` dentro do projeto, e executar o seguinte comando, via terminal:
 ```yaml
 docker-compose up
 ````
@@ -70,5 +70,5 @@ Utilize as url`s abaixo:
 ```
 1 - Url para leitura e gravação do arquivo
 
-2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc-name**:nome do produto  e **quantity-store**: quantidade de lojas que será distribuida o produto
+2 - Para calculo do dados... *Obs*: e preciso passar os parametros **produc-name**:nome do produto  e **quantity-store**: quantidade de lojas que será distribuido o produto
 
