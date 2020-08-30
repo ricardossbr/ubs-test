@@ -48,7 +48,7 @@ application.properties alterar a propriedade `filepath.location`
 colocando o caminho dos arquivo, onde será rodado... 
 Lembrando que: 
     mac/linux = /exemple/projeto/files/  
-    windows = C:\\exemple\\projeto\\files
+    windows = C:\\\exemple\\\projeto\\\files
 
 Para ultilização do Docker, acessar a pasta `infrastructure` dentro do projeto, e executar o seguinte comando, via terminal:
 ```yaml
