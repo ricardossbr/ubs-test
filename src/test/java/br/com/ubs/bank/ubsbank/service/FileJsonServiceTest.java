@@ -32,7 +32,7 @@ public class FileJsonServiceTest {
     @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
-        ReflectionTestUtils.setField(fileJsonService, "path", "/Users/ricardossbr/dev/ubs-test/src/test/java/resources");
+        ReflectionTestUtils.setField(fileJsonService, "path", "src/test/java/resources");
     }
 
     @Test

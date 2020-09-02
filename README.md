@@ -11,7 +11,7 @@ Esse é um projeto de teste, usando Java 12 para leitura, gravação e procesame
 
 Para executar o projeto, será necessário instalar os seguintes programas:
 ```yaml
-1. JDK 12+
+1. JDK 8+
 2. Apache Maven 3.6. 3
 3. MongoDB 3.8 ou Docker version 19.03.12
 ```
@@ -29,7 +29,7 @@ Para iniciar o desenvolvimento, é necessário clonar o projeto do GitHub num di
 
 ---
 
-## Construção (Build)
+## Construção
 
 Para construir o projeto com o Maven, executar os comando abaixo:
 ```yaml
@@ -41,16 +41,7 @@ O comando irá baixar todas as dependências do projeto e criar um diretório ta
 
 ## Configuração
 
-Para executar o projeto, é necessário utilizar sua IDE de preferência, no arquivo: 
-```yaml
-application.properties alterar a propriedade `filepath.location`
-````
-colocando o caminho dos arquivo, onde será rodado... 
-Lembrando que: 
-    mac/linux = /exemple/projeto/files/  
-    windows = C:\\\exemple\\\projeto\\\files
-
-Para ultilização do Docker, acessar a pasta `infrastructure` dentro do projeto, e executar o seguinte comando, via terminal:
+Para executar o projeto, é necessário utilizar sua IDE de preferência, e acessar a pasta `infrastructure` dentro do projeto, e executar o seguinte comando, via terminal:
 ```yaml
 docker-compose up
 ````
