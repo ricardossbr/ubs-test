@@ -46,7 +46,7 @@ Para executar o projeto, é necessário utilizar sua IDE de preferência, e aces
 docker-compose up
 ````
 
-Caso já tenha o MongoDB local, configurar o arquivo: **application.properties** dentro da pasta: **src/main/resources** do projeto e alterar as informações conforme abaixo:
+Caso já tenha o MongoDB local, configurar o arquivo: **application.properties** dentro da pasta: **src/main/resources** do projeto, e alterar as informações, conforme abaixo:
 
 ```yaml
 spring.data.mongodb.database=${SPRING_MONGODB_DATABASE:ubs-bank}
