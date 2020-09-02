@@ -45,6 +45,20 @@ Para executar o projeto, é necessário utilizar sua IDE de preferência, e aces
 ```yaml
 docker-compose up
 ````
+
+Caso já tenha o MongoDB local, configurar o arquivo: **application.properties** dentro da pasta do projeto e alterar as informações conforme abaixo:
+
+```yaml
+spring.data.mongodb.database=${SPRING_MONGODB_DATABASE:ubs-bank}
+spring.data.mongodb.host=${SPRING_MONGODB_HOST:localhost}
+spring.data.mongodb.port=${SPRING_MONGODB_PORT:27017}
+spring.data.mongodb.username=${SPRING_MONGODB_USERNAME:ubs-bank}
+spring.data.mongodb.password=${SPRING_MONGODB_PASSWORD:ubs-bank}
+````
+*Obs* mudar as configurações abaixo: 
+    *SPRING_MONGODB_USERNAME:* usuario local do mongo  
+    *SPRING_MONGODB_PASSWORD:* senha local do mongo
+
 ---
     
 ## Testes
