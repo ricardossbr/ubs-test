@@ -44,20 +44,6 @@ public class FileJsonServiceTest {
         Assertions.assertNotNull( product.getValue());
     }
 
-
-    private FileJson getFileJson(){
-        final FileJson file = new FileJson();
-        final Product pro = new Product();
-        pro.setIndustry("Disney");
-        pro.setOrigin("SP");
-        pro.setPrice("$7.02");
-        pro.setProduct("EMMS");
-        pro.setQuantity(10);
-        pro.setType("2XL");
-        file.setData(Arrays.asList(pro, pro, pro));
-        return file;
-    }
-
     private List<Product> getListProduct(){
         final Product pro = new Product();
         pro.setIndustry("Disney");

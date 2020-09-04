@@ -34,7 +34,7 @@ public class FileJsonService {
     }
 
     private void readFileAndSave(File[] arquivos) throws IOException {
-        for (int i=0; i< 3; i++) {
+        for (int i=0; i< arquivos.length; i++) {
             final FileJson products = mapper.readValue(new File(String.valueOf(arquivos[i])), FileJson.class);
             Arrays.asList(products.getData().stream().distinct().collect(Collectors.toList()))
                     .parallelStream().forEach(f -> this.saveProducts(f));
